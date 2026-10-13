@@ -1,0 +1,8 @@
+{
+  "skill_name": "parallel-feature-build",
+  "evals": [
+    {"id": 1, "prompt": "In the mini-shop repo, add a customer orders feature: an orders data model (customer name, list of product ids with quantities, total, status pending/paid/shipped), REST API endpoints to list, get, create and update order status, a frontend Orders page that lists orders and has a create-order form, and tests for the API. Build it fast.", "expected_output": "Plan with contract and file ownership, parallel units in worktrees, merged feature branch, all tests + lint pass, summary.", "files": []},
+    {"id": 2, "prompt": "The products API returns 'Prodcut not found' when a product is missing. Fix the typo.", "expected_output": "Triage as small; fix directly without spawning agents; tests pass.", "files": []},
+    {"id": 3, "prompt": "Add two things to mini-shop in one go: (1) supplier management - supplier model (name, phone, email), CRUD API and a Suppliers page; (2) low-stock alerts - a GET /api/products/low-stock endpoint returning products with stock below 5, and a red 'Low stock' badge next to those products on the Products page. Include tests. Use parallel agents so it's quick.", "expected_output": "Shared hotspot files (router.js, app.js, nav.js, products page) given single owners or applied at merge; no conflicts; tests + lint pass; summary.", "files": []}
+  ]
+}
